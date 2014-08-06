@@ -10,6 +10,7 @@ class Product < ActiveRecord::Base
 
   scope :featured_products, -> { where(:is_featured => true) }
   scope :available, -> {  }
+  scope :search, lambda { |query| where(["name like ?", "%#{query}%"]) }
 
   monetize :price_centavos, allow_nil: false, numericality: { greater_than: 0 }
 

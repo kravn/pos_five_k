@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1a206d2-6ac4-4360-bb65-8bbaa85edb95" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/cart.rb" afterPath="$PROJECT_DIR$/app/models/cart.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/product.rb" afterPath="$PROJECT_DIR$/app/models/product.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="pos_five_k.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,19 +29,19 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="schema.rb" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="schema.rb" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/db/schema.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="56" column="27" selection-start="2082" selection-end="2082" vertical-scroll-proportion="0.0" vertical-offset="542" max-vertical-offset="1204">
+                <state line="56" column="27" selection-start="2082" selection-end="2082" vertical-scroll-proportion="0.437613" vertical-offset="542" max-vertical-offset="1204">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="20140806115410_add_is_featured_to_products.rb" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="20140806115410_add_is_featured_to_products.rb" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/db/migrate/20140806115410_add_is_featured_to_products.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="5" column="0" selection-start="144" selection-end="144" vertical-scroll-proportion="0.12658228" vertical-offset="0" max-vertical-offset="553">
+                <state line="5" column="0" selection-start="144" selection-end="144" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="154">
                   <folding />
                 </state>
               </provider>
@@ -78,10 +78,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="product.rb" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="product.rb" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/models/product.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="16" column="11" selection-start="385" selection-end="385" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="364">
+                <state line="12" column="2" selection-start="259" selection-end="259" vertical-scroll-proportion="0.33399603" vertical-offset="0" max-vertical-offset="503">
                   <folding />
                 </state>
               </provider>
@@ -123,10 +123,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="20140806151636_add_retail_price_to_product.rb" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="20140806151636_add_retail_price_to_product.rb" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/db/migrate/20140806151636_add_retail_price_to_product.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="3" column="5" selection-start="113" selection-end="113" vertical-scroll-proportion="0.08139535" vertical-offset="0" max-vertical-offset="516">
+                <state line="3" column="5" selection-start="113" selection-end="113" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="154">
                   <folding />
                 </state>
               </provider>
@@ -170,10 +170,10 @@
         <option value="$PROJECT_DIR$/app/models/supplier.rb" />
         <option value="$PROJECT_DIR$/app/models/inventory.rb" />
         <option value="$PROJECT_DIR$/app/models/cart_item.rb" />
-        <option value="$PROJECT_DIR$/app/models/product.rb" />
         <option value="$PROJECT_DIR$/app/models/category.rb" />
         <option value="$PROJECT_DIR$/app/models/cart.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20140806151636_add_retail_price_to_product.rb" />
+        <option value="$PROJECT_DIR$/app/models/product.rb" />
       </list>
     </option>
   </component>
@@ -789,13 +789,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/product.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="11" selection-start="385" selection-end="385" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="364">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/inventory.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="0" selection-start="182" selection-end="182" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
@@ -824,23 +817,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/schema.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="27" selection-start="2082" selection-end="2082" vertical-scroll-proportion="0.0" vertical-offset="542" max-vertical-offset="1204">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20140806115410_add_is_featured_to_products.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="144" selection-end="144" vertical-scroll-proportion="0.12658228" vertical-offset="0" max-vertical-offset="553">
+        <state line="5" column="0" selection-start="144" selection-end="144" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="154">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20140806151636_add_retail_price_to_product.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="5" selection-start="113" selection-end="113" vertical-scroll-proportion="0.08139535" vertical-offset="0" max-vertical-offset="516">
+        <state line="3" column="5" selection-start="113" selection-end="113" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="154">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/schema.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="27" selection-start="2082" selection-end="2082" vertical-scroll-proportion="0.437613" vertical-offset="542" max-vertical-offset="1204">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/product.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="2" selection-start="259" selection-end="259" vertical-scroll-proportion="0.33399603" vertical-offset="0" max-vertical-offset="503">
           <folding />
         </state>
       </provider>
