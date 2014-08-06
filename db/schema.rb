@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140806161847) do
+ActiveRecord::Schema.define(version: 20140806170717) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -50,8 +50,8 @@ ActiveRecord::Schema.define(version: 20140806161847) do
     t.integer  "cart_id"
     t.integer  "product_id"
     t.integer  "quantity"
-    t.integer  "amount_centavos", default: 0,     null: false
-    t.string   "amount_currency", default: "PHP", null: false
+    t.decimal  "amount_centavos", precision: 8, scale: 2, default: 0.0,   null: false
+    t.string   "amount_currency",                         default: "PHP", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -74,8 +74,8 @@ ActiveRecord::Schema.define(version: 20140806161847) do
 
   create_table "inventories", force: true do |t|
     t.integer  "product_id"
-    t.integer  "price_centavos", default: 0,     null: false
-    t.string   "price_currency", default: "PHP", null: false
+    t.decimal  "price_centavos", precision: 8, scale: 2, default: 0.0,   null: false
+    t.string   "price_currency",                         default: "PHP", null: false
     t.integer  "quantity"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -85,13 +85,13 @@ ActiveRecord::Schema.define(version: 20140806161847) do
     t.integer  "category_id"
     t.integer  "supplier_id"
     t.string   "name"
-    t.integer  "price_centavos",        default: 0,     null: false
-    t.string   "price_currency",        default: "PHP", null: false
+    t.decimal  "price_centavos",        precision: 8, scale: 2, default: 0.0,   null: false
+    t.string   "price_currency",                                default: "PHP", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "is_featured",           default: false
-    t.integer  "retail_price_centavos", default: 0,     null: false
-    t.string   "retail_price_currency", default: "PHP", null: false
+    t.boolean  "is_featured",                                   default: false
+    t.decimal  "retail_price_centavos", precision: 8, scale: 2, default: 0.0,   null: false
+    t.string   "retail_price_currency",                         default: "PHP", null: false
   end
 
   create_table "suppliers", force: true do |t|
