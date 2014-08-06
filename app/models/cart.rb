@@ -17,4 +17,8 @@ class Cart < ActiveRecord::Base
     Cart.unpaid
   end
 
+  def daily_net_amount
+    self.items.sum(:amount_centavos)
+  end
+
 end
