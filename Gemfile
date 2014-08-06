@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 # recently added
 
+gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'devise'
 gem 'haml-rails'
 gem 'high_voltage'
 gem 'money-rails'
