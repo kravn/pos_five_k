@@ -9,8 +9,12 @@ class Product < ActiveRecord::Base
   validates :name, presence: true
 
   scope :featured_products, -> { where(:is_featured => true) }
-  scope :available, -> {}
+  scope :available, -> {  }
 
   monetize :price_centavos, allow_nil: false, numericality: { greater_than: 0 }
+
+  def self.stocks_on_hand(product)
+    Inventory.stocks_count(product) - CartItem.stocks_sold(product)
+  end
 
 end

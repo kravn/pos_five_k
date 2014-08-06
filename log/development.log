@@ -21026,3 +21026,35 @@ Migrating to CreateCartItems (20140806134138)
   [1m[35mSQL (0.5ms)[0m  DELETE FROM `carts` WHERE `carts`.`id` = 1
   [1m[36m (31.9ms)[0m  [1mCOMMIT[0m
   [1m[35mCart Load (0.3ms)[0m  SELECT `carts`.* FROM `carts`
+  [1m[36mSupplier Load (0.3ms)[0m  [1mSELECT `suppliers`.* FROM `suppliers` ORDER BY `suppliers`.`id` ASC LIMIT 1[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`supplier_id` = 1
+  [1m[36mInventory Load (0.1ms)[0m  [1mSELECT `inventories`.* FROM `inventories` INNER JOIN `products` ON `inventories`.`product_id` = `products`.`id` WHERE `products`.`supplier_id` = 1[0m
+  [1m[35mCartItem Load (0.6ms)[0m  SELECT `cart_items`.* FROM `cart_items` INNER JOIN `products` ON `cart_items`.`product_id` = `products`.`id` WHERE `products`.`supplier_id` = 1
+  [1m[36mInventory Load (0.5ms)[0m  [1mSELECT `inventories`.* FROM `inventories` ORDER BY `inventories`.`id` ASC LIMIT 1[0m
+  [1m[35m (8.9ms)[0m  SELECT SUM(`inventories`.`quantity`) AS sum_id FROM `inventories`
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM(`inventories`.`quantity`) AS sum_id FROM `inventories`[0m
+  [1m[35mInventory Load (0.6ms)[0m  SELECT `inventories`.* FROM `inventories` WHERE `inventories`.`product_id` = 1
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM(`inventories`.`quantity`) AS sum_id FROM `inventories`[0m
+  [1m[35m (0.2ms)[0m  SELECT SUM(`inventories`.`quantity`) AS sum_id FROM `inventories`
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM(`inventories`.`quantity`) AS sum_id FROM `inventories`[0m
+  [1m[35m (0.2ms)[0m  SELECT SUM(`inventories`.`quantity`) AS sum_id FROM `inventories`
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM(`inventories`.`quantity`) AS sum_id FROM `inventories`[0m
+  [1m[35m (0.3ms)[0m  SELECT SUM(`inventories`.`quantity`) AS sum_id FROM `inventories`
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM(`inventories`.`quantity`) AS sum_id FROM `inventories`[0m
+  [1m[35m (0.3ms)[0m  SELECT SUM(`inventories`.`quantity`) AS sum_id FROM `inventories`
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM(`inventories`.`quantity`) AS sum_id FROM `inventories`[0m
+  [1m[35mInventory Load (0.5ms)[0m  SELECT `inventories`.* FROM `inventories` WHERE (product_id = 1)
+  [1m[36m (0.6ms)[0m  [1mSELECT SUM(`inventories`.`quantity`) AS sum_id FROM `inventories` WHERE (product_id = 1)[0m
+  [1m[35m (0.5ms)[0m  SELECT SUM(`inventories`.`quantity`) AS sum_id FROM `inventories` WHERE `inventories`.`product_id` = 1
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM(`inventories`.`quantity`) AS sum_id FROM `inventories` WHERE `inventories`.`product_id` = 1[0m
+  [1m[35mProduct Load (0.5ms)[0m  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mSELECT SUM(`inventories`.`quantity`) AS sum_id FROM `inventories` WHERE `inventories`.`product_id` IS NULL[0m
+  [1m[35m (0.3ms)[0m  SELECT SUM(`inventories`.`quantity`) AS sum_id FROM `inventories` WHERE `inventories`.`product_id` IS NULL
+  [1m[36m (0.5ms)[0m  [1mSELECT SUM(`cart_items`.`quantity`) AS sum_id FROM `cart_items` WHERE `cart_items`.`product_id` IS NULL[0m
+  [1m[35m (0.3ms)[0m  SELECT SUM(`inventories`.`quantity`) AS sum_id FROM `inventories` WHERE `inventories`.`product_id` IS NULL
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM(`cart_items`.`quantity`) AS sum_id FROM `cart_items` WHERE `cart_items`.`product_id` IS NULL[0m
+  [1m[35m (0.3ms)[0m  SELECT SUM(`inventories`.`quantity`) AS sum_id FROM `inventories` WHERE `inventories`.`product_id` IS NULL
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM(`cart_items`.`quantity`) AS sum_id FROM `cart_items` WHERE `cart_items`.`product_id` IS NULL[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT SUM(`inventories`.`quantity`) AS sum_id FROM `inventories` WHERE `inventories`.`product_id` IS NULL
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM(`cart_items`.`quantity`) AS sum_id FROM `cart_items` WHERE `cart_items`.`product_id` IS NULL[0m
