@@ -1,0 +1,35 @@
+.feature-container
+  .container
+    .row
+      .brand-title
+        .main-title The best store in town
+        .sub-title
+          Learn from us, just visit
+          = link_to "About Us", page_path('about')
+        %br
+    .row
+      - (1..6).each do
+        .col-md-4
+          .feature-block-sizable
+            %h1
+              %strong Responsive Design
+            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+            %h1
+              .btn.btn-primary.btn-flat
+                Go Here
+          %br
+    .row
+      - (1..2).each do
+        .col-md-6
+          .feature-block-sizable
+            %h1
+              %strong Responsive Design
+            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia
+            %h1
+              .btn.btn-primary.btn-flat
+                Go Here
+          %br
+
+
+    %br
+      %br
