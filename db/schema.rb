@@ -11,12 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140806110655) do
+ActiveRecord::Schema.define(version: 20140806115410) do
 
   create_table "categories", force: true do |t|
     t.string   "title"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "products", force: true do |t|
+    t.integer  "category_id"
+    t.integer  "supplier_id"
+    t.string   "name"
+    t.integer  "price_centavos", default: 0,     null: false
+    t.string   "price_currency", default: "PHP", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.boolean  "is_featured",    default: false
   end
 
   create_table "suppliers", force: true do |t|

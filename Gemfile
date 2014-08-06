@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 
 gem 'haml-rails'
 gem 'high_voltage'
+gem 'money-rails'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

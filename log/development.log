@@ -20904,3 +20904,91 @@ Migrating to CreateSuppliers (20140806110655)
   [1m[35mSQL (0.4ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20140806110655')
   [1m[36m (29.6ms)[0m  [1mCOMMIT[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-06 19:25:02 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PagesController#index as HTML
+  Rendered pages/_carousel.html.haml (0.1ms)
+  Rendered pages/_featured.html.haml (0.3ms)
+  Rendered pages/index.html.haml within layouts/application (2.1ms)
+  Rendered layouts/_top_bar.html.haml (0.3ms)
+  Rendered layouts/_footer.html.haml (0.0ms)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-08-06 19:25:02 +0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-06 19:25:02 +0800
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-08-06 19:25:02 +0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-06 19:25:02 +0800
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-08-06 19:25:02 +0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-06 19:25:02 +0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-06 19:25:02 +0800
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-08-06 19:25:02 +0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-06 19:25:02 +0800
+
+
+Started GET "/assets/bg.png" for 127.0.0.1 at 2014-08-06 19:25:02 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateProducts (20140806112838)
+  [1m[35m (71.8ms)[0m  CREATE TABLE `products` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `category_id` int(11), `supplier_id` int(11), `name` varchar(255), `price_cents` int(11) DEFAULT 0 NOT NULL, `price_currency` varchar(255) DEFAULT 'USD' NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20140806112838')
+  [1m[36m (36.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+Migrating to CreateProducts (20140806112838)
+  [1m[36m (41.4ms)[0m  [1mDROP TABLE `products`[0m
+  [1m[35mSQL (29.6ms)[0m  DELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20140806112838'
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateProducts (20140806112838)
+  [1m[35m (68.3ms)[0m  CREATE TABLE `products` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `category_id` int(11), `supplier_id` int(11), `name` varchar(255), `price_centavos` int(11) DEFAULT 0 NOT NULL, `price_currency` varchar(255) DEFAULT 'PHP' NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20140806112838')
+  [1m[36m (37.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to AddIsFeaturedToProducts (20140806115410)
+  [1m[35m (158.4ms)[0m  ALTER TABLE `products` ADD `is_featured` tinyint(1)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20140806115410')
+  [1m[36m (25.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+Migrating to AddIsFeaturedToProducts (20140806115410)
+  [1m[36m (174.9ms)[0m  [1mALTER TABLE `products` DROP `is_featured`[0m
+  [1m[35mSQL (29.8ms)[0m  DELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20140806115410'
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to AddIsFeaturedToProducts (20140806115410)
+  [1m[35m (185.7ms)[0m  ALTER TABLE `products` ADD `is_featured` tinyint(1) DEFAULT 0
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20140806115410')
+  [1m[36m (36.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36mProduct Load (0.6ms)[0m  [1mSELECT `products`.* FROM `products`[0m
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `suppliers` (`created_at`, `name`, `updated_at`) VALUES ('2014-08-06 13:07:41', 'Nestle', '2014-08-06 13:07:41')
+  [1m[36m (46.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mSupplier Load (0.6ms)[0m  SELECT `suppliers`.* FROM `suppliers`
+  [1m[36mSupplier Load (0.6ms)[0m  [1mSELECT `suppliers`.* FROM `suppliers` ORDER BY `suppliers`.`id` ASC LIMIT 1[0m
+  [1m[35mProduct Load (0.5ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`supplier_id` = 1
