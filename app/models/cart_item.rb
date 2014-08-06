@@ -7,6 +7,9 @@ class CartItem < ActiveRecord::Base
 
   monetize :amount_centavos
 
+  validates_presence_of :cart
+  validates_associated :cart
+
   def self.stocks_sold(product)
     where(:product_id => product).sum(:quantity)
   end
