@@ -1,0 +1,18 @@
+%nav#top-bar.navbar.navbar-inverse{role: 'navigation'}
+  .container
+    .navbar-header
+      %button.navbar-toggle{type: "button", class: "navbar-toggle", data: { toggle: "collapse", target: ".js-topbar-menu"}}
+        %span.sr-only
+          Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      .navbar-brand
+        %span
+          = link_to 'Kravnsoft', '#'
+
+
+
+    .collapse.navbar-collapse{id: 'bs-example-navbar-collapse-1'}
+      %ul.nav.navbar-nav.navbar-right
+        %li= link_to 'Login', '#'
