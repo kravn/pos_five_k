@@ -7,6 +7,8 @@ class Product < ActiveRecord::Base
   has_many :cart_items
 
   validates :name, presence: true
+  validates :price_centavos, presence: true
+  validates :retail_price_centavos, presence: true
 
   scope :featured_products, -> { where(:is_featured => true) }
   scope :available, -> {  }

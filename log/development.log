@@ -21109,3 +21109,9 @@ Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-06 23:23:52
 Started GET "/assets/bg.png" for 127.0.0.1 at 2014-08-06 23:23:52 +0800
   [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1[0m
   [1m[35mProduct Load (0.6ms)[0m  SELECT `products`.* FROM `products` WHERE (name like '%lol%')
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (first_name like 'karl%' and last_name like 'marx%')[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `users` (`created_at`, `first_name`, `last_name`, `updated_at`) VALUES ('2014-08-06 15:53:16', 'Karlmarx', 'Fabe', '2014-08-06 15:53:16')[0m
+  [1m[35m (36.2ms)[0m  COMMIT
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (first_name like 'k%' and last_name like 'f%')[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM `users` WHERE (first_name like 'k%' and last_name like 'f%')
