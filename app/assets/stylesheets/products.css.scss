@@ -1,0 +1,13 @@
+// Place all the styles related to the Products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+table {
+  margin: auto;
+  td, th {
+    padding: 5px 10px;
+  }
+  tr:hover {
+    background-color: #c4e3f3;
+  }
+}

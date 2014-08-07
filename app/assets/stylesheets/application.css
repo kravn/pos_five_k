@@ -1,5 +1,6 @@
 /*
  *= require bootstrap.min
+ *= require base
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
  *
@@ -12,6 +13,3 @@
  *= require_self
  *= require_tree .
  */
-
-html { width: 100%; }
-body { width: 100%; }

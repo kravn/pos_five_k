@@ -16,7 +16,7 @@ class Product < ActiveRecord::Base
 
   monetize :price_centavos, allow_nil: false, numericality: { greater_than: 0 }
 
-  def self.stocks_on_hand(product)
+  def stocks_on_hand(product)
     Inventory.stocks_count(product) - CartItem.stocks_sold(product)
   end
 

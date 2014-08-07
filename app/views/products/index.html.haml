@@ -1,0 +1,24 @@
+.container
+  .section-container
+    .row
+      .section-title
+        .main-title List of Products
+        .sub-title Stocks on hand
+
+    .row
+      %table
+        %tr
+          %th ID
+          %th Name
+          %th Orig. Price
+          %th Retail Price
+          %th Stocks on Hand
+          %th Actions
+        - @products.each do |product|
+          %tr
+            %td= product.id
+            %td= product.name
+            %td= product.price_centavos
+            %td= product.retail_price_centavos
+            %td= product.stocks_on_hand(product)
+            %td Add Edit Delete
